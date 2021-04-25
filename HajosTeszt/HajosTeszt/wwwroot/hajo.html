@@ -14,9 +14,9 @@
 
         <div id="középső">
             <div id="válaszok">
-                <div id="válasz1" class="kerdes">Válasz 1</div>
-                <div id="válasz2" class="kerdes">Válasz 2</div>
-                <div id="válasz3" class="kerdes">Válasz 3</div>
+                <div id="válasz1" class="kerdes" onclick="elsőválasz()">Válasz 1</div>
+                <div id="válasz2" class="kerdes" onclick="másodikválasz()">Válasz 2</div>
+                <div id="válasz3" class="kerdes" onclick="harmadikválasz()">Válasz 3</div>
             </div>
 
             <div id="kép">
@@ -25,8 +25,8 @@
         </div>
         <!-- https://szoft1.comeback.hu/hajo/teszt-0050.jpg -->
         <div id="vezérlő">
-            <div class="gomb kattintható">Vissza</div>
-            <div class="gomb kattintható">Előre</div>
+            <div id="vissza" class="gomb kattintható" onclick="vissza()">Vissza</div>
+            <div id="előre"class="gomb kattintható" onclick="előre()">Előre</div>
         </div>
     </div>
 </body>
