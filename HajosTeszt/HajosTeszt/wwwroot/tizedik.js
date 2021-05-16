@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //Kezdő kérdéslista letöltése
-    if (hotList.length === 0) {
+    if (!localStorage.getItem("hotList")) {
         for (let i = 0; i < questionsInHotList; i++) {
             kérdésBetöltés(nextQuestion, i);
             nextQuestion++;
@@ -85,14 +85,14 @@ function kérdésMegjelenítés() {
     document.getElementById("válasz3").innerText = kérdés.answer3;
 
     if (kérdés.image) {
-        document.getElementById("kép1").src = kérdés.image;
+        document.getElementById("kép1").src = "https://szoft1.comeback.hu/hajo/" + kérdés.image;
         document.getElementById("kép1").style.display = "block";
     }
     else {
         document.getElementById("kép1").style.display = "none";
     }
 
-    for (let i = 1; i < 3; i++) document.getElementById("válasz" + i).classList.remove("jó", "rossz");
+    for (let i = 1; i < 4; i++) document.getElementById("válasz" + i).classList.remove("jó", "rossz");
     document.getElementById("válaszok").style.pointerEvents = "auto";
 }
 
